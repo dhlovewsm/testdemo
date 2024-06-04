@@ -7,7 +7,8 @@ public class User implements Serializable {
     private String loginName;
     private String username;
 
-    private String password;
+    //该成员变量不参与序列化
+    private transient String password;
 
     private int age;
 
