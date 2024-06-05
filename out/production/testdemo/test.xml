@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<users>
+    <user id="1">
+        <name>zhangsan</name>
+        <password>123456</password>
+        <gender>male</gender>
+        <data> 3 &lt; 2 &amp;&amp; 5 &gt; 4</data>
+        <data1>
+            <![CDATA[
+              3 > 2 && 5 > 4
+            ]]>
+        </data1>
+    </user>
+</users>
