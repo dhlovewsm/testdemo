@@ -1,8 +1,6 @@
 package com.dh.net.tcp;
 
-import java.io.DataInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -14,7 +12,7 @@ public class Server2 {
         while (true) {
 
             Socket sock = server.accept();
-
+            System.out.println("有人上线了：" + sock.getRemoteSocketAddress());
 
             new ServerReaderThread(sock).start();
 
