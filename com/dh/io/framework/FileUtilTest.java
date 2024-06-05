@@ -15,7 +15,7 @@ public class FileUtilTest {
 
     public static void main(String[] args) throws IOException {
 
-        FileUtils.copyFile(new File("a.txt"), new File("aa.txt"));
+        FileUtils.copyFile(new File("resource/a.txt"), new File("resource/aa.txt"));
         FileUtils.copyDirectory(new File("resource"), new File("resource1"));
 
         FileUtils.deleteDirectory(new File("resource1"));
@@ -24,10 +24,10 @@ public class FileUtilTest {
         /**
          * Java原生的
          */
-        Files.copy(Path.of("b.txt"), Path.of("bb1.txt"));
+        Files.copy(Path.of("resource/b.txt"), Path.of("bb1.txt"));
         Files.delete(Path.of("bb1.txt"));
 
-        System.out.println(Files.readString(Path.of("a.txt")));
+        System.out.println(Files.readString(Path.of("resource/a.txt")));
 
     }
 

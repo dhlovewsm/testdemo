@@ -24,7 +24,7 @@ public class ObjectInputStreamTest {
     private static void write(){
 
         try (
-                ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("d.txt"));
+                ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("resource/d.txt"));
         ){
 
             User user = new User("admin", "admin", "123456", 20);
@@ -45,7 +45,7 @@ public class ObjectInputStreamTest {
 
         try (
                 ObjectInputStream ois =
-                        new ObjectInputStream(new FileInputStream("d.txt"));
+                        new ObjectInputStream(new FileInputStream("resource/d.txt"));
         ){
 
 

@@ -13,7 +13,7 @@ public class PropertyTest {
     public static void main(String[] args) throws IOException {
 
         Properties properties = new Properties();
-        properties.load(new BufferedInputStream(new FileInputStream("test.properties")));
+        properties.load(new BufferedInputStream(new FileInputStream("resource/test.properties")));
         System.out.println(properties.getProperty("name"));
         System.out.println(properties.getProperty("password"));
         System.out.println(properties.getProperty("gender"));
@@ -33,7 +33,7 @@ public class PropertyTest {
          * 写入文件
          */
         properties.setProperty("address", "hangzhou");
-        properties.store(new FileWriter("test1.properties"), "saved address");
+        properties.store(new FileWriter("resource/test1.properties"), "saved address");
 
 
     }

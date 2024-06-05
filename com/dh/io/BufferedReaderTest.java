@@ -7,10 +7,10 @@ public class BufferedReaderTest {
     public static void main(String[] args) {
 
         try(
-                Reader reader = new FileReader("aaa.txt");
+                Reader reader = new FileReader("resource/aaa.txt");
                 BufferedReader br = new BufferedReader(reader);
 
-                Writer writer = new FileWriter("bbb.txt");
+                Writer writer = new FileWriter("resource/bbb.txt");
                 BufferedWriter bw = new BufferedWriter(writer);
                 ){
 

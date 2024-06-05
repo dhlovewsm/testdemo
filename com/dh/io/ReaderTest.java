@@ -13,7 +13,7 @@ public class ReaderTest {
     public static void main(String[] args){
 
         try (
-                Reader reader = new FileReader("aaa.txt");
+                Reader reader = new FileReader("resource/aaa.txt");
                 ){
 
             //每次读取一个字符，性能差，浪费资源

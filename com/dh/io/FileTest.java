@@ -14,8 +14,8 @@ public class FileTest {
 
         List<String> data = new ArrayList<>();
         try (
-                BufferedReader br = new BufferedReader(new FileReader("a.txt"));
-                BufferedWriter bw = new BufferedWriter(new FileWriter("b.txt"));
+                BufferedReader br = new BufferedReader(new FileReader("resource/a.txt"));
+                BufferedWriter bw = new BufferedWriter(new FileWriter("resource/b.txt"));
                 ){
 
             String line;

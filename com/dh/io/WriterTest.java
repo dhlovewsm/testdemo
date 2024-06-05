@@ -11,7 +11,7 @@ public class WriterTest {
 
     public static void main(String[] args) {
 
-        try (Writer writer = new FileWriter("aaa.txt", true)){
+        try (Writer writer = new FileWriter("resource/aaa.txt", true)){
 
             writer.write("\r\nabsdsfslkdjf我爱你");
             writer.write("97");

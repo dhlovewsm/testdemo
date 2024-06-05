@@ -18,7 +18,7 @@ public class XmlTest {
 
     public static void main(String[] args) throws DocumentException, IOException {
 
-        Document document = SAXReader.createDefault().read("test.xml");
+        Document document = SAXReader.createDefault().read("resource/test.xml");
 
         Element root = document.getRootElement();
         System.out.println(root.getName());
@@ -54,7 +54,7 @@ public class XmlTest {
         sb.append("</book>\n");
 
         try (
-                BufferedWriter bw = new BufferedWriter(new FileWriter("book.xml"));
+                BufferedWriter bw = new BufferedWriter(new FileWriter("resource/book.xml"));
                 ){
             bw.write(sb.toString());
         }catch (Exception e){

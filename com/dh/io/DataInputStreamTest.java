@@ -26,7 +26,7 @@ public class DataInputStreamTest {
 
         try(
                 DataOutputStream dos =
-                        new DataOutputStream(new FileOutputStream("c.txt"));
+                        new DataOutputStream(new FileOutputStream("resource/c.txt"));
         ){
 
             dos.writeInt(5);
@@ -51,7 +51,7 @@ public class DataInputStreamTest {
 
         try(
                 DataInputStream dis =
-                        new DataInputStream(new FileInputStream("c.txt"));
+                        new DataInputStream(new FileInputStream("resource/c.txt"));
 
         ){
 
