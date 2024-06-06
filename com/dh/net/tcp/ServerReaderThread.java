@@ -1,8 +1,6 @@
 package com.dh.net.tcp;
 
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.Socket;
 
 public class ServerReaderThread extends Thread{
@@ -30,10 +28,13 @@ public class ServerReaderThread extends Thread{
 
             while (true) {
                 try {
-                    System.out.println(dis.readUTF());
+                    String msg = dis.readUTF();
+                    System.out.println(msg);
                     System.out.println(sock.getRemoteSocketAddress());
+                    sendToAll(msg);
                 } catch (IOException e) {
                     System.out.println(sock.getRemoteSocketAddress() + "离线了！！！");
+                    Server2.getOnlineSocket().remove(sock);
                     try {
                         dis.close();
                         sock.close();
@@ -46,6 +47,17 @@ public class ServerReaderThread extends Thread{
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+
+    }
+
+    private void sendToAll(String msg) throws IOException {
+
+        for (Socket onlineSocket : Server2.getOnlineSocket()){
+            OutputStream os = onlineSocket.getOutputStream();
+            DataOutputStream dos = new DataOutputStream(os);
+            dos.writeUTF(msg);
+            dos.flush();
         }
 
     }

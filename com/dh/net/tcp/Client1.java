@@ -19,6 +19,8 @@ public class Client1 {
         OutputStream os = socket.getOutputStream();
         DataOutputStream dos = new DataOutputStream(os);
 
+        //创建独立线程，随时读取
+        new ClientReaderThread(socket).start();
 
         Scanner sc = new Scanner(System.in);
         while (true) {
