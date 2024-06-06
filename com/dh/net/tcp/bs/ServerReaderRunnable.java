@@ -1,14 +1,13 @@
 package com.dh.net.tcp.bs;
 
-import java.io.DataOutputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.net.Socket;
 
-public class ServerReaderThread extends Thread{
+public class ServerReaderRunnable implements Runnable{
 
     private Socket socket;
-    public ServerReaderThread(Socket socket){
+    public ServerReaderRunnable(Socket socket){
         this.socket = socket;
     }
 
